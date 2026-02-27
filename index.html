@@ -2,273 +2,42 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>All योनो गेम्स | Rumble Rummy & Jaiho Slots</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-        }
-        body {
-            background: #f0f2f5;
-            padding: 15px;
-            padding-bottom: 30px;
-        }
-        .header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 18px;
-            border-radius: 24px;
-            text-align: center;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
-        }
-        .header h1 {
-            font-size: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .header h1 i {
-            font-size: 30px;
-        }
-        .section-title {
-            font-size: 20px;
-            color: #1f2937;
-            margin: 20px 0 12px 0;
-            padding-left: 8px;
-            border-left: 5px solid #667eea;
-            font-weight: 600;
-        }
-        .games-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        .game-card {
-            background: white;
-            border-radius: 28px;
-            padding: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            border: 1px solid rgba(102, 126, 234, 0.2);
-            transition: all 0.2s;
-        }
-        .game-card:active {
-            transform: scale(0.99);
-            border-color: #667eea;
-        }
-        .game-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 24px;
-            object-fit: cover;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 2px;
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
-        }
-        .game-info {
-            flex: 1;
-        }
-        .game-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 4px;
-        }
-        .game-bonus {
-            background: #e6f7e6;
-            color: #10b981;
-            padding: 4px 10px;
-            border-radius: 40px;
-            font-size: 13px;
-            font-weight: 600;
-            display: inline-block;
-            margin: 6px 0;
-        }
-        .game-withdraw {
-            font-size: 14px;
-            color: #4b5563;
-            margin-bottom: 6px;
-        }
-        .game-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 13px;
-            color: #6b7280;
-            margin: 8px 0;
-        }
-        .game-rating {
-            color: #f59e0b;
-            font-weight: 600;
-        }
-        .game-rating i {
-            margin-right: 3px;
-        }
-        .game-size {
-            background: #f3f4f6;
-            padding: 3px 10px;
-            border-radius: 40px;
-        }
-        .download-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            padding: 14px 22px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 12px;
-            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
-            transition: all 0.2s;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .download-btn i {
-            font-size: 18px;
-        }
-        .download-btn:active {
-            transform: scale(0.97);
-            opacity: 0.9;
-        }
-        .footer-note {
-            text-align: center;
-            margin-top: 30px;
-            color: #6b7280;
-            font-size: 14px;
-        }
-        hr {
-            margin: 20px 0;
-            border: 1px dashed #d1d5db;
-        }
-        .error-message {
-            background: #fee2e2;
-            color: #dc2626;
-            padding: 15px;
-            border-radius: 16px;
-            text-align: center;
-            margin: 20px 0;
-        }
-    </style>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All योनो गेम्स</title>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
-        <h1>
-            <i class="fas fa-dice-d6"></i>
-            All योनो गेम्स
-        </h1>
-        <p style="font-size: 14px; margin-top: 8px; opacity: 0.9;">✨ सीधा डाउनलोड • नए गेम्स • कोई रजिस्ट्रेशन नहीं</p>
+        <h1>⚡ All योनो गेम्स</h1>
     </div>
 
-    <h2 class="section-title">🔥 नए गेम्स</h2>
-    <div class="games-grid" id="gameList">
-        <div class="loader" style="text-align: center; padding: 30px; color: #667eea;">गेम्स लोड हो रहे हैं...</div>
+    <div class="games-container" id="gamesContainer">
+        <!-- Skeleton Loader -->
+        <div id="skeletonLoader">
+            <div class="skeleton">
+                <div class="skeleton-logo"></div>
+                <div style="flex:1">
+                    <div class="skeleton-line" style="width:60%"></div>
+                    <div class="skeleton-line" style="width:40%"></div>
+                    <div class="skeleton-line" style="width:80%"></div>
+                </div>
+            </div>
+            <div class="skeleton">
+                <div class="skeleton-logo"></div>
+                <div style="flex:1">
+                    <div class="skeleton-line" style="width:60%"></div>
+                    <div class="skeleton-line" style="width:40%"></div>
+                    <div class="skeleton-line" style="width:80%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Games list -->
+        <div id="gamesList" style="display: none;"></div>
     </div>
 
-    <hr>
-    <div style="text-align: center; padding: 10px; background: white; border-radius: 50px; margin-top: 10px;">
-        <span style="color: #4b5563;">🔜 जल्द ही और गेम्स आ रहे हैं...</span>
-    </div>
-
-    <div class="footer-note">
-        ⚡ सीधा लिंक • 100% सुरक्षित • भरोसेमंद
-    </div>
-
-    <script>
-        // ⭐⭐⭐ यहाँ अपना Google Apps Script URL डालो ⭐⭐⭐
-        const API_URL = "https://script.google.com/macros/s/AKfycbxoWHa3dv3KFzLZqpXPsn7PCscwwQin--24C0E8CpEEzrJ4ZeO3fJxHw6Ri5VVnI4WBCw/exec";
-
-        async function loadGames() {
-            const gameListDiv = document.getElementById('gameList');
-            try {
-                // Show loading state
-                gameListDiv.innerHTML = '<div class="loader" style="text-align: center; padding: 30px; color: #667eea;">गेम्स लोड हो रहे हैं...</div>';
-                
-                // Fetch data from Google Sheets via Apps Script
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                
-                // Check if games exist
-                if (!data.games || data.games.length === 0) {
-                    gameListDiv.innerHTML = '<div class="error-message"><i class="fas fa-exclamation-triangle"></i> कोई गेम नहीं मिला</div>';
-                    return;
-                }
-
-                // Generate HTML for each game
-                let gamesHTML = '';
-                data.games.forEach(game => {
-                    gamesHTML += `
-                        <div class="game-card">
-                            <img src="${game.logoUrl || 'https://via.placeholder.com/80/667eea/ffffff?text=Game'}" 
-                                 alt="${game.gameName} Logo" 
-                                 class="game-logo"
-                                 onerror="this.src='https://via.placeholder.com/80/667eea/ffffff?text=Game'">
-                            <div class="game-info">
-                                <div class="game-name">🎮 ${game.gameName}</div>
-                                <div class="game-bonus"><i class="fas fa-gift"></i> बोनस: ${game.bonus}</div>
-                                <div class="game-withdraw"><i class="fas fa-wallet"></i> न्यूनतम निकासी: ₹${game.minWithdrawl}</div>
-                                <div class="game-meta">
-                                    <span class="game-rating"><i class="fas fa-star"></i> ${game.rating}</span>
-                                    <span class="game-size">📦 ${game.size} MB</span>
-                                </div>
-                                <button class="download-btn" onclick="downloadAPK('${game.downloadUrl}')">
-                                    <i class="fas fa-download"></i> अभी डाउनलोड करें
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                });
-
-                gameListDiv.innerHTML = gamesHTML;
-
-            } catch (error) {
-                console.error('Error:', error);
-                gameListDiv.innerHTML = `<div class="error-message">
-                    <i class="fas fa-exclamation-circle"></i> गेम्स लोड करने में समस्या हुई। 
-                    <br><small>${error.message}</small>
-                </div>`;
-            }
-        }
-
-        function downloadAPK(url) {
-            try {
-                const link = document.createElement('a');
-                link.href = url;
-                link.setAttribute('download', '');
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
-                // Show success feedback
-                const btn = event.target.closest('button');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = '<i class="fas fa-check"></i> डाउनलोड शुरू...';
-                btn.style.background = '#10b981';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
-                }, 2000);
-
-            } catch (error) {
-                alert('Download link: ' + url);
-            }
-        }
-
-        // Load games when page opens
-        loadGames();
-    </script>
+    <!-- JavaScript file link -->
+    <script src="script.js"></script>
 </body>
 </html>
