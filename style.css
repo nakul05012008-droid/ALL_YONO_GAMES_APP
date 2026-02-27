@@ -28,6 +28,7 @@ body {
     padding: 12px;
 }
 
+/* Game Card Styles */
 .game-card {
     background: white;
     border-radius: 20px;
@@ -38,11 +39,11 @@ body {
     align-items: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
-    animation: fadeIn 0.3s ease;
+    animation: slideIn 0.15s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(3px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -89,8 +90,7 @@ body {
     font-weight: 500;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(255,255,255,0.2);
-    transition: all 0.2s;
+    transition: all 0.15s;
 }
 
 .download-btn:active {
@@ -98,7 +98,7 @@ body {
     opacity: 0.9;
 }
 
-/* Skeleton Loader */
+/* Fast Skeleton Loading with Shimmer */
 .skeleton {
     background: white;
     border-radius: 20px;
@@ -113,30 +113,32 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 18px;
-    background: #e2e8f0;
-    animation: pulse 1.5s infinite;
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: fastShimmer 1s infinite linear;
 }
 
 .skeleton-line {
     height: 16px;
-    background: #e2e8f0;
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
     border-radius: 8px;
     margin: 8px 0;
-    animation: pulse 1.5s infinite;
+    animation: fastShimmer 1s infinite linear;
 }
 
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-.loader-hidden {
-    display: none !important;
+/* Fast Shimmer Effect */
+@keyframes fastShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .error-message {
     text-align: center;
     padding: 40px;
     color: #ef4444;
+}
+
+.loader-hidden {
+    display: none !important;
 }
