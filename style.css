@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: #f8fafc;
+}
+
+.header {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.games-container {
+    padding: 12px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.game-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    background: #f1f5f9;
+    object-fit: cover;
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.game-bonus {
+    color: #059669;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.game-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #64748b;
+    margin: 6px 0;
+}
+
+.download-btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.2s;
+}
+
+.download-btn:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+/* Skeleton Loader */
+.skeleton {
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.skeleton-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    background: #e2e8f0;
+    animation: pulse 1.5s infinite;
+}
+
+.skeleton-line {
+    height: 16px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    margin: 8px 0;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loader-hidden {
+    display: none !important;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px;
+    color: #ef4444;
+}
