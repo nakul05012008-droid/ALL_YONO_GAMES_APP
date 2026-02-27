@@ -4,40 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All योनो गेम्स</title>
-    <!-- CSS file link -->
     <link rel="stylesheet" href="style.css">
+    <!-- Preload images for faster loading -->
+    <link rel="preload" as="image" href="images/rumble-rummy.png">
+    <link rel="preload" as="image" href="images/jaiho-slots.png">
 </head>
 <body>
     <div class="header">
         <h1>⚡ All योनो गेम्स</h1>
     </div>
 
-    <div class="games-container" id="gamesContainer">
+    <div class="games-container">
         <!-- Skeleton Loader -->
         <div id="skeletonLoader">
-            <div class="skeleton">
-                <div class="skeleton-logo"></div>
-                <div style="flex:1">
-                    <div class="skeleton-line" style="width:60%"></div>
-                    <div class="skeleton-line" style="width:40%"></div>
-                    <div class="skeleton-line" style="width:80%"></div>
-                </div>
-            </div>
-            <div class="skeleton">
-                <div class="skeleton-logo"></div>
-                <div style="flex:1">
-                    <div class="skeleton-line" style="width:60%"></div>
-                    <div class="skeleton-line" style="width:40%"></div>
-                    <div class="skeleton-line" style="width:80%"></div>
-                </div>
-            </div>
+            <div class="skeleton"><div class="skeleton-logo"></div><div style="flex:1"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:40%"></div><div class="skeleton-line" style="width:80%"></div></div></div>
+            <div class="skeleton"><div class="skeleton-logo"></div><div style="flex:1"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:40%"></div><div class="skeleton-line" style="width:80%"></div></div></div>
         </div>
 
         <!-- Games list -->
         <div id="gamesList" style="display: none;"></div>
     </div>
 
-    <!-- JavaScript file link -->
     <script src="script.js"></script>
 </body>
 </html>
