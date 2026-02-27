@@ -30,9 +30,12 @@
     </div>
 
     <script>
+        // Tumhara Google Sheets API URL
+        const API_URL = "https://script.google.com/macros/s/AKfycbwWIx9buGmX6aabKnyGx20yDdkJQxnqUVJ-Q24il2RVOACN4Gcpjlci68U-GRMi0amA/exec";
+        
         async function loadGames() {
             try {
-                let res = await fetch('games.json');
+                let res = await fetch(API_URL);
                 let data = await res.json();
                 let games = data.games;
                 let html = '';
@@ -41,7 +44,7 @@
                     html += `
                         <div class="card">
                             <img src="${game.logoUrl}">
-                            <h3>${game.name}</h3>
+                            <h3>${game.gameName}</h3>
                             <button class="download-btn" onclick="window.location.href='${game.downloadUrl}'">
                                 Download
                             </button>
@@ -51,7 +54,7 @@
                 
                 document.getElementById('gamesList').innerHTML = html;
             } catch(err) {
-                document.getElementById('gamesList').innerHTML = 'Error loading games';
+                document.getElementById('gamesList').innerHTML = 'Error loading games: ' + err.message;
             }
         }
         
