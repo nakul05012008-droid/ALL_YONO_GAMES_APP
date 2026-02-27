@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Teen Patti Gold",
+      "category": "Card Game",
+      "tags": ["earning game", "yono game", "teen patti"],
+      "downloadUrl": "https://example.com/teen-patti.apk",
+      "logoUrl": "https://via.placeholder.com/100/667eea/ffffff?text=TP",
+      "isNew": true,
+      "isPopular": true,
+      "downloads": 15000,
+      "rating": 4.5
+    }
+  ]
+}
