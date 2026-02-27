@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Yono Games</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+        .header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:15px;text-align:center}
+        .search{padding:15px}
+        .search input{width:100%;padding:12px;border:1px solid #ddd;border-radius:25px;font-size:16px}
+        .games{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+        .card{background:white;border-radius:10px;padding:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+        .card img{width:60px;height:60px;border-radius:10px}
+        .card h3{font-size:14px;margin:5px 0}
+        .download-btn{background:#667eea;color:white;border:none;padding:8px;border-radius:5px;width:100%}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>All Yono Games</h1>
+    </div>
+    
+    <div class="search">
+        <input type="text" id="search" placeholder="🔍 Game search karein...">
+    </div>
+    
+    <div class="games" id="gamesList">
+        Loading...
+    </div>
+
+    <script>
+        async function loadGames() {
+            try {
+                let res = await fetch('games.json');
+                let data = await res.json();
+                let games = data.games;
+                let html = '';
+                
+                games.forEach(game => {
+                    html += `
+                        <div class="card">
+                            <img src="${game.logoUrl}">
+                            <h3>${game.name}</h3>
+                            <button class="download-btn" onclick="window.location.href='${game.downloadUrl}'">
+                                Download
+                            </button>
+                        </div>
+                    `;
+                });
+                
+                document.getElementById('gamesList').innerHTML = html;
+            } catch(err) {
+                document.getElementById('gamesList').innerHTML = 'Error loading games';
+            }
+        }
+        
+        loadGames();
+    </script>
+</body>
+</html>
