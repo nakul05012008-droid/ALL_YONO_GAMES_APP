@@ -3,28 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All योनो गेम्स</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Preload images for faster loading -->
-    <link rel="preload" as="image" href="images/rumble-rummy.png">
-    <link rel="preload" as="image" href="images/jaiho-slots.png">
+    <title>ALL YONO STORE</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif;}
+        body{background:#f0f2f5;}
+        .store-container{max-width:1200px;margin:0 auto;background:white;}
+        .top-bar{background:#1a2634;color:white;padding:12px 30px;display:flex;justify-content:space-between;}
+        .main-header{padding:20px 30px;display:flex;justify-content:space-between;border-bottom:1px solid #e5e7eb;}
+        .logo-img{height:50px;}
+        .domain-url{color:#4a5b6b;font-size:13px;}
+        .game-card{display:flex;align-items:center;border:1px solid #eef2f6;padding:15px 20px;margin:10px 30px;}
+        .game-icon{width:48px;height:48px;border-radius:8px;margin-right:15px;}
+        .game-info{flex:1;}
+        .game-name{font-size:17px;font-weight:600;}
+        .bonus-text{background:#e8f5e9;color:#00a859;padding:3px 12px;border-radius:20px;}
+        .download-link{background:#00a859;color:white;padding:10px 25px;border-radius:4px;text-decoration:none;}
+        .footer{background:#1a2634;color:#8a9fb0;padding:40px 30px;margin-top:30px;text-align:center;}
+    </style>
 </head>
 <body>
-    <div class="header">
-        <h1>⚡ All योनो गेम्स</h1>
-    </div>
+    <div class="store-container">
+        <div class="top-bar">
+            <span>ALL YONO STORE</span>
+            <a href="#" id="joinUs" style="color:white;text-decoration:none;">Join Us</a>
+        </div>
+        
+        <header class="main-header">
+            <div>
+                <img src="images/logo.png" class="logo-img" alt="logo" onerror="this.style.display='none'">
+                <div class="domain-url">allyonostore.com</div>
+            </div>
+        </header>
 
-    <div class="games-container">
-        <!-- Skeleton Loader -->
-        <div id="skeletonLoader">
-            <div class="skeleton"><div class="skeleton-logo"></div><div style="flex:1"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:40%"></div><div class="skeleton-line" style="width:80%"></div></div></div>
-            <div class="skeleton"><div class="skeleton-logo"></div><div style="flex:1"><div class="skeleton-line" style="width:60%"></div><div class="skeleton-line" style="width:40%"></div><div class="skeleton-line" style="width:80%"></div></div></div>
+        <div style="padding:20px 30px;">
+            <h2>All Yono Games</h2>
+            <div id="gamesList"></div>
         </div>
 
-        <!-- Games list -->
-        <div id="gamesList" style="display: none;"></div>
+        <footer class="footer">
+            <div>© 2024 ALL YONO STORE</div>
+        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        async function loadGames() {
+            try {
+                let res = await fetch('games-data.json');
+                let data = await res.json();
+                let html = '';
+                
+                data.games.forEach(game => {
+                    html += `
+                        <div class="game-card">
+                            <img src="${game.image}" class="game-icon" onerror="this.src='https://via.placeholder.com/48'">
+                            <div class="game-info">
+                                <div class="game-name">${game.name}</div>
+                                <div>
+                                    <span class="bonus-text">Bonus ${game.bonus}</span>
+                                    <span style="margin-left:15px;">Min ₹${game.withdraw}</span>
+                                </div>
+                            </div>
+                            <a href="${game.link}" class="download-link">Download</a>
+                        </div>
+                    `;
+                });
+                
+                document.getElementById('gamesList').innerHTML = html;
+            } catch(e) {
+                document.getElementById('gamesList').innerHTML = 'Error loading games';
+            }
+        }
+        
+        loadGames();
+    </script>
 </body>
 </html>
