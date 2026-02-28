@@ -2,75 +2,20 @@
   "games": [
     {
       "id": 1,
-      "name": "Teen Patti Master",
-      "category": "Card Game",
-      "tags": ["earning game", "yono game", "teen patti", "cash game"],
-      "downloadUrl": "https://www.example.com/teen-patti.apk",
-      "logoUrl": "https://via.placeholder.com/100/FF0000/FFFFFF?text=TPM",
-      "isNew": true,
-      "isPopular": true,
-      "downloads": 50000,
-      "rating": 4.5
+      "name": "Rumble Rummy",
+      "bonus": "₹100",
+      "withdraw": "100",
+      "image": "images/rumble-icon.png",
+      "link": "https://www.rumblerummy1.vip/?code=UC0MYQVSLR2&t=1772204096"
     },
     {
       "id": 2,
-      "name": "Rummy Online",
-      "category": "Card Game",
-      "tags": ["earning app", "yono game", "rummy", "real money"],
-      "downloadUrl": "https://www.example.com/rummy.apk",
-      "logoUrl": "https://via.placeholder.com/100/00FF00/FFFFFF?text=RO",
-      "isNew": true,
-      "isPopular": true,
-      "downloads": 35000,
-      "rating": 4.3
-    },
-    {
-      "id": 3,
-      "name": "Andar Bahar Real",
-      "category": "Casino",
-      "tags": ["yono game", "andar bahar", "casino", "fast cash"],
-      "downloadUrl": "https://www.example.com/andar-bahar.apk",
-      "logoUrl": "https://via.placeholder.com/100/0000FF/FFFFFF?text=AB",
-      "isNew": false,
-      "isPopular": true,
-      "downloads": 25000,
-      "rating": 4.2
-    },
-    {
-      "id": 4,
-      "name": "Dragon vs Tiger",
-      "category": "Casino",
-      "tags": ["earning game", "yono game", "dragon tiger", "live casino"],
-      "downloadUrl": "https://www.example.com/dragon-tiger.apk",
-      "logoUrl": "https://via.placeholder.com/100/FFA500/FFFFFF?text=DT",
-      "isNew": true,
-      "isPopular": false,
-      "downloads": 15000,
-      "rating": 4.0
-    },
-    {
-      "id": 5,
-      "name": "Ludo Earning",
-      "category": "Board Game",
-      "tags": ["earning app", "yono game", "ludo", "paytm cash"],
-      "downloadUrl": "https://www.example.com/ludo.apk",
-      "logoUrl": "https://via.placeholder.com/100/800080/FFFFFF?text=LE",
-      "isNew": false,
-      "isPopular": true,
-      "downloads": 75000,
-      "rating": 4.7
-    },
-    {
-      "id": 6,
-      "name": "3 Patti Lucky",
-      "category": "Card Game",
-      "tags": ["yono game", "teen patti", "lucky game", "cash"],
-      "downloadUrl": "https://www.example.com/3patti.apk",
-      "logoUrl": "https://via.placeholder.com/100/FFC0CB/000000?text=3PL",
-      "isNew": true,
-      "isPopular": false,
-      "downloads": 8000,
-      "rating": 3.9
+      "name": "Jaiho Slots",
+      "bonus": "₹20",
+      "withdraw": "100",
+      "image": "images/jaiho-icon.png",
+      "link": "https://www.jaihoslots20.com/?code=EGPAQGXL8VY&t=1772204223"
     }
-  ]
+  ],
+  "lastUpdated": "2024-02-28"
 }
